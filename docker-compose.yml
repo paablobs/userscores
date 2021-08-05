@@ -1,0 +1,22 @@
+version: "3.1"
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql-db-data:/var/lib/mysql
+  back:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./:/app/
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+volumes:
+  mysql-db-data:
