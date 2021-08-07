@@ -1,5 +1,6 @@
-version: "3.1"
-services:
+version: '3.8'
+
+services: 
   db:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
@@ -8,15 +9,20 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - mysql-db-data:/var/lib/mysql
-  back:
+  backend:
     build:
-      context: ./backend
-      dockerfile: ./Dockerfile
-    volumes:
-      - ./:/app/
+      context: .
+      dockerfile: ./backend/Dockerfile
+    image: userscores_back
     ports:
-      - 8080:8080
+      - 3000:3000
+    volumes: 
+      - ./backend:/backend
+      - backend/node_modules
     depends_on:
       - db
+    stdin_open: true
+    tty: true
+
 volumes:
   mysql-db-data:
