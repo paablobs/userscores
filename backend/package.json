@@ -1,20 +1,23 @@
 {
-	"name": "userscores",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"start": "node index.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"docker",
-		"mysql",
-		"nodejs"
-	],
-	"author": "paablobs",
-	"license": "ISC",
-	"dependencies": {
-		"express": "^4.17.1"
-	}
+  "name": "userscores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -L index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docker",
+    "mysql",
+    "nodejs"
+  ],
+  "author": "paablobs",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
