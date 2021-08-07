@@ -1,9 +1,8 @@
 FROM node:12
-WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
+WORKDIR /frontend
+ENV PATH /frontend/node_modules/.bin:$PATH
+COPY /frontend/package.json .
+RUN npm install
 RUN npm install react-scripts@3.4.1 -g --silent
-COPY . ./
-CMD ["npm", "start"]
+EXPOSE 3000
+CMD [ "npm", "start" ]
