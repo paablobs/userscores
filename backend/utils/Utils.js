@@ -1,5 +1,4 @@
 const conn = require("../models");
-const userscoresController = require("./controllers/userscores.controller");
 
 async function createPlayer() {
   const response = await axios.get("https://randomuser.me/api");
