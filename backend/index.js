@@ -8,9 +8,13 @@ app.get("/getScores", async (req, res) => {
   await userscoresController.getBestScores(req, res);
 });
 
-app.listen(port, async () => {
+app.get("/", async (req, res) => {
   await initialPlayerCreation();
   await createScores();
+  res.send("Everything Ok");
+});
+
+app.listen(port, async () => {
   setInterval(() => {
     createScores();
   }, 300000);

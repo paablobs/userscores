@@ -1,7 +1,6 @@
-const conn = require("../models");
 const { getBestScores } = require("../utils/Utils");
 
 exports.getBestScores = async (req, res) => {
-  const scoreList = getBestScores();
+  const scoreList = await getBestScores();
   res.send(scoreList);
 };

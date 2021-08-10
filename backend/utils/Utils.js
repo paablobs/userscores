@@ -1,4 +1,5 @@
 const conn = require("../models");
+const axios = require("axios");
 
 async function createPlayer() {
   const response = await axios.get("https://randomuser.me/api");
