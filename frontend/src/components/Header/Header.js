@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Navbar bg="danger">
       <Container>
-        <Navbar.Text className="headerText">Psh-Exam</Navbar.Text>
+        <Navbar.Text className="headerText">Userscores</Navbar.Text>
       </Container>
     </Navbar>
   );
