@@ -1,0 +1,19 @@
+.table-container {
+  margin: 2rem 0;
+}
+
+.loading {
+  margin-left: 4rem;
+}
+
+.download-text {
+  text-align: right;
+}
+
+.rowMargin.row {
+  margin: 2rem 0;
+}
+
+.update {
+  margin: 2rem 0;
+}
